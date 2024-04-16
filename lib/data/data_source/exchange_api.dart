@@ -11,7 +11,6 @@ class ExchangeApi {
   Future<ExchangeDto> getExchangeInfo(String ticker) async {
     final String url = '$_baseUrl$_apiKey/latest/$ticker';
     final http.Response response = await _client.get(Uri.parse(url));
-    ExchangeDto.fromJson(jsonDecode(response.body));
+    return ExchangeDto.fromJson(jsonDecode(response.body));
   }
-
 }

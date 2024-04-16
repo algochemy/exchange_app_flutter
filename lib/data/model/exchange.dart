@@ -16,7 +16,7 @@ class Exchange with _$Exchange {
     required int timeNextUpdateUnix,
     required String timeNextUpdateUtc,
     required String baseCode,
-    required Map<String, num> conversionRates,
+    required Map<String, double> conversionRates,
   }) = _Exchange;
 
   factory Exchange.fromJson(Map<String, Object?> json) => _$ExchangeFromJson(json);

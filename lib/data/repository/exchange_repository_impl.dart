@@ -12,7 +12,6 @@ class ExchangeImpl implements Exchange {
   //   required ExchangeApi exchangeApi,
   // }) : _exchangeApi = exchangeApi;
 
-  this
 
   @override
   Future<List<ExchangeInfo>> getExchangeInfo(String ticker) async {
