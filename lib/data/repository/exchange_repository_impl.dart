@@ -17,7 +17,7 @@ class ExchangeRepositoryImpl implements ExchangeRepository {
     final ExchangeDto dto = await _exchangeApi.getExchangeInfo(ticker);
     // return dto.realtimeArrivalList!.map((e) => e.toSubway()).toList(); // 리스트 타입 꺼내올 때 사용
     // return dto.conversionRates!.map((e) => e.toExchange()).toList(); // Map 타입 꺼내와야 함 (수정 필요)
-    return dto.toExchange(); // K, V 어떻게 추출?
+    return dto.toExchange();
   }
 }
 
