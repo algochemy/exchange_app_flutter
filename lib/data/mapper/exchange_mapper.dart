@@ -13,7 +13,7 @@ extension ToExchange on ExchangeDto {
       timeNextUpdateUnix: timeNextUpdateUnix ?? 0,
       timeNextUpdateUtc: timeNextUpdateUtc ?? '',
       baseCode: baseCode ?? '',
-      conversionRates: conversionRates ,
+      conversionRates: conversionRates,
     );
   }
 }

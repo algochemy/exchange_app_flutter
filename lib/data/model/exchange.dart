@@ -1,4 +1,3 @@
-import 'package:exchange_app_flutter/data/dto/exchange_dto.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'exchange.freezed.dart';
