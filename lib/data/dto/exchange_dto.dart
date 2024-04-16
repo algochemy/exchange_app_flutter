@@ -44,7 +44,7 @@ class ExchangeDto {
     Map<dynamic, dynamic> toJson() => {
         "result": result,
         "time_next_update_unix": timeNextUpdateUnix,
-        "conversion_rates": Map.from(conversionRates).map((k, v) => MapEntry<String, dynamic>(k, v)),
+        "conversion_rates": Map.from(conversionRates).map((k, v) => MapEntry<String, double>(k, v)),
         "time_next_update_utc": timeNextUpdateUtc,
         "documentation": documentation,
         "time_last_update_unix": timeLastUpdateUnix,

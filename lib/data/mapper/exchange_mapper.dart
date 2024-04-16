@@ -1,5 +1,8 @@
+import 'dart:ffi';
+
 import '../dto/exchange_dto.dart';
 import '../model/exchange.dart';
+import '../model/exchange_rate.dart';
 
 extension ToExchange on ExchangeDto {
   Exchange toExchange() {
@@ -22,7 +25,6 @@ extension ToExchange on ExchangeDto {
       timeNextUpdateUnix: timeNextUpdateUnix,
       timeNextUpdateUtc: timeNextUpdateUtc,
       baseCode: baseCode,
-      conversionRates: conversionRates,
-    );
+      conversionRates: conversionRates.entries.map((e) => ExchangeRate(code: e.key, rate: e.value)).toList());
   }
 }

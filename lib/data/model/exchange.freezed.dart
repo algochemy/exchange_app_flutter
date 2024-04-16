@@ -28,7 +28,7 @@ mixin _$Exchange {
   int get timeNextUpdateUnix => throw _privateConstructorUsedError;
   String get timeNextUpdateUtc => throw _privateConstructorUsedError;
   String get baseCode => throw _privateConstructorUsedError;
-  Map<String, double> get conversionRates => throw _privateConstructorUsedError;
+  List<ExchangeRate> get conversionRates => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,7 +50,7 @@ abstract class $ExchangeCopyWith<$Res> {
       int timeNextUpdateUnix,
       String timeNextUpdateUtc,
       String baseCode,
-      Map<String, double> conversionRates});
+      List<ExchangeRate> conversionRates});
 }
 
 /// @nodoc
@@ -112,7 +112,7 @@ class _$ExchangeCopyWithImpl<$Res, $Val extends Exchange>
       conversionRates: null == conversionRates
           ? _value.conversionRates
           : conversionRates // ignore: cast_nullable_to_non_nullable
-              as Map<String, double>,
+              as List<ExchangeRate>,
     ) as $Val);
   }
 }
@@ -134,7 +134,7 @@ abstract class _$$ExchangeImplCopyWith<$Res>
       int timeNextUpdateUnix,
       String timeNextUpdateUtc,
       String baseCode,
-      Map<String, double> conversionRates});
+      List<ExchangeRate> conversionRates});
 }
 
 /// @nodoc
@@ -194,7 +194,7 @@ class __$$ExchangeImplCopyWithImpl<$Res>
       conversionRates: null == conversionRates
           ? _value._conversionRates
           : conversionRates // ignore: cast_nullable_to_non_nullable
-              as Map<String, double>,
+              as List<ExchangeRate>,
     ));
   }
 }
@@ -211,7 +211,7 @@ class _$ExchangeImpl implements _Exchange {
       required this.timeNextUpdateUnix,
       required this.timeNextUpdateUtc,
       required this.baseCode,
-      required final Map<String, double> conversionRates})
+      required final List<ExchangeRate> conversionRates})
       : _conversionRates = conversionRates;
 
   factory _$ExchangeImpl.fromJson(Map<String, dynamic> json) =>
@@ -233,12 +233,12 @@ class _$ExchangeImpl implements _Exchange {
   final String timeNextUpdateUtc;
   @override
   final String baseCode;
-  final Map<String, double> _conversionRates;
+  final List<ExchangeRate> _conversionRates;
   @override
-  Map<String, double> get conversionRates {
-    if (_conversionRates is EqualUnmodifiableMapView) return _conversionRates;
+  List<ExchangeRate> get conversionRates {
+    if (_conversionRates is EqualUnmodifiableListView) return _conversionRates;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_conversionRates);
+    return EqualUnmodifiableListView(_conversionRates);
   }
 
   @override
@@ -308,7 +308,7 @@ abstract class _Exchange implements Exchange {
       required final int timeNextUpdateUnix,
       required final String timeNextUpdateUtc,
       required final String baseCode,
-      required final Map<String, double> conversionRates}) = _$ExchangeImpl;
+      required final List<ExchangeRate> conversionRates}) = _$ExchangeImpl;
 
   factory _Exchange.fromJson(Map<String, dynamic> json) =
       _$ExchangeImpl.fromJson;
@@ -330,7 +330,7 @@ abstract class _Exchange implements Exchange {
   @override
   String get baseCode;
   @override
-  Map<String, double> get conversionRates;
+  List<ExchangeRate> get conversionRates;
   @override
   @JsonKey(ignore: true)
   _$$ExchangeImplCopyWith<_$ExchangeImpl> get copyWith =>

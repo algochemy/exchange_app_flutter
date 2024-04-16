@@ -1,5 +1,6 @@
 import 'package:exchange_app_flutter/presentation/exchange_state.dart';
 import 'package:flutter/material.dart';
+import '../data/model/exchange.dart';
 import '../data/repository/exchange_repository.dart';
 
 class ExchangeViewModel with ChangeNotifier {
@@ -12,13 +13,11 @@ class ExchangeViewModel with ChangeNotifier {
 
   ExchangeState get state => _state;
 
-  void onSearch(String ticker) async {
-
-    _state = state.copyWith(
-      exchange: await _exchangeRepository.getExchangeInfo(ticker),
-    );
-    notifyListeners();
-  }
+ Future<void> _updateExchangeRate(String ticker) async {
+   final result = await _exchangeRepository.getExchangeInfo(ticker);
+   _state = state.copyWith(exchange: result);
+   notifyListeners();
+ }
 
 
 }

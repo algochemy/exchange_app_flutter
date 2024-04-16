@@ -1,3 +1,4 @@
+import 'package:exchange_app_flutter/data/model/exchange_rate.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'exchange.freezed.dart';
@@ -15,7 +16,7 @@ class Exchange with _$Exchange {
     required int timeNextUpdateUnix,
     required String timeNextUpdateUtc,
     required String baseCode,
-    required Map<String, double> conversionRates,
+    required List<ExchangeRate> conversionRates,
   }) = _Exchange;
 
   factory Exchange.fromJson(Map<String, Object?> json) => _$ExchangeFromJson(json);
