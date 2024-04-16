@@ -1,5 +1,5 @@
-// class ExchangeDto {
-//   ExchangeDto({
+// class ExchangeDto2 {
+//   ExchangeDto2({
 //       this.result,
 //       this.documentation,
 //       this.termsOfUse,
@@ -10,7 +10,7 @@
 //       this.baseCode,
 //       this.conversionRates,});
 //
-//   ExchangeDto.fromJson(dynamic json) {
+//   ExchangeDto2.fromJson(dynamic json) {
 //     result = json['result'];
 //     documentation = json['documentation'];
 //     termsOfUse = json['terms_of_use'];
@@ -30,7 +30,7 @@
 //   String? timeNextUpdateUtc;
 //   String? baseCode;
 //   ConversionRates? conversionRates;
-// ExchangeDto copyWith({  String? result,
+// ExchangeDto2 copyWith({  String? result,
 //   String? documentation,
 //   String? termsOfUse,
 //   int? timeLastUpdateUnix,
@@ -39,7 +39,7 @@
 //   String? timeNextUpdateUtc,
 //   String? baseCode,
 //   ConversionRates? conversionRates,
-// }) => ExchangeDto(  result: result ?? this.result,
+// }) => ExchangeDto2(  result: result ?? this.result,
 //   documentation: documentation ?? this.documentation,
 //   termsOfUse: termsOfUse ?? this.termsOfUse,
 //   timeLastUpdateUnix: timeLastUpdateUnix ?? this.timeLastUpdateUnix,
